@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{box-sizing: border-box;}
+body{
+    font-family : 'roboto', sans-serif ;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    background-color: #BFD8B8;
+    position: relative;
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+}
+.container .whitekeys{
+    
+    display: flex;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+}
+.container .whitekeys .wkey{
+    background-color: red;
+    height: 100%;
+    width:14.2%;
+    margin: 1px;
+    text-align:center;
+    border-radius: 5px;
+    position: relative;
+
+}
+.container .blackkeys{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+}
+.container .blackkeys .bkey{
+    background-color: black;
+    color: #fff;
+    width: 14.2%;
+    height: 100%;
+    margin: 1px;
+    text-align: center;
+    transform: translateX(-50%);
+    padding: 0 ;  
+    box-shadow: 0 10px 20px rgba(0, 0,0, 1),0 6px 6px rgba(0, 0,0, 0.1);  
+    border-radius: 5px;
+}
+.container .blackkeys .bkey.invisible{
+    opacity: 0%;
+}
+.container .blackkeys .bkey:active{
+    transform: translateX(-50%) scale(0.98);
+}
+.container .whitekeys .wkey:active{
+    transform: scale(0.98);
+}
+.containerdad{
+    width: 100vw;
+    display: flex;
+    background-color:#BFD8B8 ;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0,0, 1),0 6px 6px rgba(0, 0,0, 0.1);  
+}
+.container .whitekeys .wkey .textwk{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+}
+@media(max-width:800px){
+
+    .bkey,.wkey{
+        font-size: xx-small;
+    }
+}
+
